@@ -17,43 +17,40 @@
 
 <form action="add.php" method="post" name="form1">
     <table width="25%" border="0">
-        <tr> 
+        <tr class="w-full"> 
             <td>Name</td>
-            <td><input type="text" name="name"></td>
+            <td><input type="text" name="name" class="px-4 py-2 text-gray-700 rounded mb-2 shadow"></td>
         </tr>
         <tr> 
             <td>Email</td>
-            <td><input type="text" name="email"></td>
+            <td><input type="text" name="email" class="px-4 py-2 text-gray-700 rounded mb-2 shadow"></td>
         </tr>
         <tr> 
             <td>Mobile</td>
-            <td><input type="text" name="mobile"></td>
+            <td><input type="text" name="mobile" class="px-4 py-2 text-gray-700 rounded mb-2 shadow"></td>
         </tr>
         <tr> 
             <td>Kelurahan</td>
-            <td><input type="text" name="kelurahan"></td>
+            <td><input type="text" name="kelurahan" class="px-4 py-2 text-gray-700 rounded mb-2 shadow"></td>
         </tr>
         <tr> 
             <td>Distrik</td>
-            <td><input type="text" name="distrik"></td>
+            <td><input type="text" name="distrik" class="px-4 py-2 text-gray-700 rounded mb-2 shadow"></td>
         </tr>
         <tr> 
             <td>Kabupaten</td>
-            <td><input type="text" name="kabupaten"></td>
+            <td><input type="text" name="kabupaten" class="px-4 py-2 text-gray-700 rounded mb-2 shadow"></td>
         </tr>
         <tr> 
             <td>Provinsi</td>
-            <td><input type="text" name="provinsi"></td>
+            <td><input type="text" name="provinsi" class="px-4 py-2 text-gray-700 rounded mb-2 shadow"></td>
         </tr>
         <tr> 
             <td></td>
-            <td><input type="submit" name="Submit" value="Add"></td>
+            <td><input type="submit" name="Submit" value="Add" class="bg-gray-700 hover:bg-gray-600 p-3 text-white rounded cursor-pointer"></td>
         </tr>
     </table>
 </form>
-
-</div>
-
 
 <?php
 
@@ -74,8 +71,13 @@ if(isset($_POST['Submit'])) {
     $result = mysqli_query($mysqli, "INSERT INTO users(name,email,mobile,kelurahan,distrik,kabupaten,provinsi) VALUES('$name','$email','$mobile','$kelurahan','$distrik','$kabupaten','$provinsi')");
     
     // Show message when user added
-    echo "User added successfully. <a href='index.php'>View Users</a>";
+    echo "User added successfully. <a href='index.php' class='bg-sky-700 hover:bg-gray-600 p-2 text-white rounded cursor-pointer'>View Users</a>";
 }
 ?>
+
+</div>
+
+
+
 </body>
 </html>
